@@ -49,6 +49,7 @@ public class Driver {
                     for(int i = 0; i < accountList.length; i++) {
                         System.out.println(accountList[i].getAccountNum());
                     }
+                    break;
                 case 2:
                     // require input of account holder's last name
                     // that account.deposit
@@ -105,6 +106,7 @@ public class Driver {
                     for(int i = 0; i < accountList.length; i++) {
                         accountList[i].addInterest(0.5);
                     }
+                    System.out.println("Interest added to all accounts");
                     break;
                 case 5:
                     // print total number of accounts
