@@ -104,7 +104,7 @@ public class Driver {
                 case 4:
                     // all accounts.addInterest
                     for(int i = 0; i < accountList.length; i++) {
-                        accountList[i].addInterest(0.5);
+                        accountList[i].addInterest(0.05);
                     }
                     System.out.println("Interest added to all accounts");
                     break;
