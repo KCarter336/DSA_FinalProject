@@ -47,7 +47,10 @@ public class Driver {
             switch (selection){
                 case 1:
                     for(int i = 0; i < accountList.length; i++) {
-                        System.out.println(accountList[i].getAccountNum());
+                        System.out.println("Name: " + accountList[i].getFirstName() + " "+ accountList[i].getLastName());
+                        System.out.println("Balance: $" + accountList[i].getBalance());
+                        System.out.println("Account Type (C=Checking S=Savings): " + accountList[i].getAccountType());
+                        System.out.println("Account Number: " + accountList[i].getAccountNum() + "\n");
                     }
                     break;
                 case 2:
@@ -67,6 +70,7 @@ public class Driver {
                         System.out.println("Input deposit amount: ");
                         double amt = cin.nextDouble();
                         accountList[selectedAccount].deposit(amt);
+                        System.out.println("Balance: " + accountList[selectedAccount].getBalance());
                     }
                     else{
                         System.out.println("We don't have an account in that name");
@@ -92,6 +96,7 @@ public class Driver {
                         double amt = cin.nextDouble();
                         if (accountList[selectedAccount].getBalance() > amt) {
                             accountList[selectedAccount].withdrawal(amt);
+                            System.out.println("Balance: " + accountList[selectedAccount].getBalance());
                         }
                         else{
                             System.out.printf("Sorry, you don't have enough funds. Balance is: %f \n", accountList[selectedAccount].getBalance());
