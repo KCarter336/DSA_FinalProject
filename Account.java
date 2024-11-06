@@ -59,6 +59,9 @@ public class Account {
     public int getPerson(){
         return this.person;
     }
+    public String getFirstName(){
+        return this.firstName;
+    }
     public String getLastName(){
         return this.lastName;
     }
